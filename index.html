@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Web App – Simple Interest Calculator</title>
+    </head>
+    <body>
+        <div class="maindiv">
+            <h1>Simple Interest Calculator</h1>
+            <!-- A table environment was the most direct way to align things -->
+            <table>
+                <tr>
+                    <td> Amount</td> <td> <input type="number"  id="principal"> </td> 
+                </tr>
+                <tr>
+                    <!-- oninput attribute is more comfortable than the other for the user.-->
+                    <td>Rate</td> <td><input type="range" min="1" max="20" step="0.25" value="10.25"  id="rate" oninput="setSliderTextOutput()"> <span id="rate:rateValue">10.25%</span>    </td>
+
+                </tr>
+                <tr>
+                    <td>No. of Years</td> <td> <input type="number"  min="1" max="10" id="years"></td>
+                </tr>
+                <tr>
+                    <td>
+                        <button onclick="compute()">Compute Interest</button>
+                    </td>
+                </tr>
+            </table>
+            <span id="result"></span>
+            <footer>&#169 Everyone Can Get Rich</footer>
+        </div>
+    </body>
+</html>
